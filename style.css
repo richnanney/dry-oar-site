@@ -52,7 +52,9 @@ p {
   text-align: center;
 }
 
-
+#hero-img {
+  position: center;
+}
 
 #hero-msg h1,
 #hero-msg h4,
