@@ -1,26 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&family=Montserrat&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&family=Montserrat&display=swap);
 
 body {
   background-color: #36486b;
   font-size: 22px;
+  font-family: 'Bebas Neue', Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  font-family: 'Bebas Neue', Helvetica, sans-serif;
 }
 
 #content {
   max-width: 1600px;
-  margin: 0 auto;
   background-color: #fefbd8;
+  margin: 0 auto;
 }
 
-
-h1{
+h1 {
   font-family: 'Bebas Neue', Helvetica, sans-serif;
   color: #4040a1;
   background-color: #618685;
   text-align: center;
-
 }
 
 h2 {
@@ -38,22 +36,18 @@ h3 {
   color: #4040a1;
   background-color: #618685;
   text-align: center;
-  padding: 10px;
   margin-bottom: 0;
+  padding: 10px;
 }
 
 h4 {
-  color: black;
+  color: #000000;
 }
 
 p {
-  font-family: 'Abel', Helvetica, serif;
+  font-family: Abel, Helvetica, serif;
   color: #36486b;
   text-align: center;
-}
-
-#hero-img {
-  position: center;
 }
 
 #hero-msg h1,
@@ -63,8 +57,21 @@ main section {
   text-align: center;
 }
 
+#hero-msg {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  margin-top: 100px;
+}
+
+/*#hero-img{
+    grid-column:2/3; This block doesn't change anything.
+    grid-row:2/3;
+  }*/
+
 .card-img {
-  border: 10px solid #618685;
+  border: 10px solid #d9c2a3;
+  transition: transform .5s;
+  box-shadow: 5px 5px 10px #6f7364;
 }
 
 main section img {
@@ -74,6 +81,8 @@ main section img {
 #background {
   height: 725px;
   background-color: #618685;
+  grid-column: 1/11;
+  grid-row: 4/9;
 }
 
 .book,
@@ -81,9 +90,9 @@ main section img {
   background-color: #618685;
   text-decoration: none;
   font-size: 18px;
-  padding: 15px 30px;
   margin-top: 50px;
   border-radius: 5px;
+  padding: 15px 30px;
 }
 
 .book:hover,
@@ -96,6 +105,9 @@ main section img {
   background-color: #618685;
   text-decoration: none;
   line-height: 1.5em;
+  grid-column: 6/10;
+  grid-row: 6/7;
+  box-shadow: 5px 5px 10px #6f7364;
   padding: 35px;
 }
 
@@ -106,26 +118,28 @@ main section img {
 
 nav {
   background-color: #fefbd8;
+  display: flex;
+  justify-content: space-around;
   padding: 1em;
 }
 
 nav a {
   color: #618685;
   text-decoration: none;
-  padding: 35px;
   text-align: center;
+  padding: 35px;
 }
 
 nav li {
-  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-family: Montserrat, Helvetica, sans-serif;
   list-style-type: none;
 }
 
 nav ul {
-  margin: 0;
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(6em, 1fr));
+  margin: 0;
 }
 
 nav a:hover {
@@ -141,28 +155,29 @@ nav a:hover {
 
 #logo_link {
   padding-top: 5px;
+  justify-self: center;
+  align-self: center;
 }
 
 footer {
-  display: grid;
   grid-template-columns: 1fr max-content repeat(3, max-content);
-  align-items: center;
-  justify-content: center;
   line-height: 3.5em;
   background-color: #618685;
-  border: 1px solid black;
+  border: 1px solid #000;
   text-decoration: underline;
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   padding: 25px 50px;
 }
 
 header {
-  display: grid;
-  grid-template-columns: 125px auto;
   align-items: center;
   background-color: #618685;
+  display: grid;
+  grid-template-columns: 150px auto;
 }
-
-
 
 .home-title {
   font-family: 'Bebas Neue', Helvetica, sans-serif;
@@ -171,10 +186,10 @@ header {
 }
 
 .logo-box {
-  background-color: white;
+  background-color: #FFF;
   border-radius: 50px 50px 0 0;
-  padding: 0.5em;
   border: 1px solid #a43312;
+  padding: .5em;
 }
 
 .socialmedia {
@@ -185,10 +200,106 @@ header {
   width: 80px;
   height: 80px;
   box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.15);
-  margin: 15px 10px 0 0;
   padding-top: 10px;
+  margin: 15px 10px 0 0;
 }
 
 #info {
   font-size: 12px;
+}
+
+#hero {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  margin-top: -100px;
+}
+
+#hero-box {
+  grid-column: 1/4;
+  grid-row: 1/3;
+  z-index: -1;
+}
+
+.card-img,
+.mountains {
+  width: 100%;
+}
+
+.rivers-card {
+  grid-column: 2/4;
+  grid-row: 2/3;
+}
+
+.camping-card {
+  grid-column: 5/7;
+  grid-row: 2/3;
+}
+
+.rapids-card {
+  grid-column: 8/10;
+  grid-row: 2/3;
+}
+
+.mountains {
+  width: 100%;
+  grid-column: 2/7;
+  grid-row: 5/8;
+  box-shadow: 5px 5px 10px black;
+}
+
+.card-img:hover {
+  opacity: .6;
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 900px) {
+
+  #hero,
+  .home-grid {
+    display: block;
+    height: auto;
+  }
+
+  nav,
+  footer {
+    flex-direction: column;
+  }
+
+  nav a {
+    display: block;
+    padding: 15px;
+  }
+
+  .home-title {
+    font-size: 25px;
+    color: #6f7364;
+  }
+
+  .rivers-card,
+  .camping-card,
+  .rapids-card {
+    width: 60%;
+    margin: 50px auto;
+  }
+
+  .mountains,
+  .msg {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  footer {
+    margin-top: 25px;
+  }
+
+  #hero,
+  #hero-msg {
+    margin-top: 0;
+  }
+
+  #hero-msg h4,
+  #background {
+    display: none;
+  }
 }
